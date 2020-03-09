@@ -133,7 +133,7 @@ contactPh.innerText = siteContent["contact"]["phone"];
 let contactEmail = contactSec.children[3];
 contactEmail.innerText = siteContent["contact"]["email"];
 
-let footerSec = document.querySelectorAll(".footer")[0];
+let footerSec = document.querySelectorAll("footer")[0];
 let footerCopy = footerSec.children[0];
 
 // let footerCopy = footerSec.children[0];
