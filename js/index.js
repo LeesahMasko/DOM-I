@@ -44,7 +44,22 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 let navLinks = document.getElementsByTagName("a")
 for (i=0; i < navLinks.length; i++){
   navLinks[i].innerText = siteContent["nav"]["nav-item-" + (i+1)];
+  navLinks[i].style.color = 'green';
 }
+let navAdd = document.querySelector("nav");
+
+let preLink = document.createElement("a");
+  preLink.textContent = "I'm Confused"
+  preLink.href = "#";
+  preLink.style.color = "green";
+
+let postLink = document.createElement("a")
+  postLink.textContent = "Wait...What?"
+  postLink.href = "#";
+  postLink.style.color = "green";
+
+  navAdd.prepend(preLink);
+  navAdd.appendChild(postLink);
 
 // navLinks[0].innerText = siteContent["nav"]["nav-item-1"];
 // navLinks[1].innerText = siteContent["nav"]["nav-item-2"];
@@ -135,6 +150,4 @@ contactEmail.innerText = siteContent["contact"]["email"];
 
 let footerSec = document.querySelectorAll("footer")[0];
 let footerCopy = footerSec.children[0];
-
-// let footerCopy = footerSec.children[0];
 footerCopy.innerText = siteContent["footer"]["copyright"];
